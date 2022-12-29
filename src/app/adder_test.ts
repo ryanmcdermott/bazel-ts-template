@@ -1,8 +1,7 @@
-// Jasmine Test for adder.ts
+import { add } from './adder';
 
-// Test
-describe('Adder', () => {
+describe('Adder Test', () => {
     it('should add two numbers', () => {
         expect(add(1, 2)).toBe(3);
     });
-}
+});

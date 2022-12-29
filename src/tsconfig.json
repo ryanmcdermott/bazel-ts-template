@@ -9,8 +9,8 @@
             "es2018",
             "DOM"
         ],
-        "module": "ES2020",
-        "moduleResolution": "node",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
         "noEmitOnError": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
@@ -38,8 +38,8 @@
             "../bazel-out/aarch64-fastbuild/bin/src"
         ],
         "typeRoots": [
-            "./types"
-        ],
+            "../bazel-out/aarch64-fastbuild/bin/external/npm/node_modules/@types",
+        ]
     },
     "exclude": [
         "node_modules"
