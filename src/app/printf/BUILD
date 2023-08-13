@@ -1,12 +1,11 @@
-load("@npm//@bazel/typescript:index.bzl", ts_proj = "ts_project")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
 
-ts_proj(
+ts_project(
     name = "printf",
     srcs = [
         "printf.ts", 
     ],
     declaration = True,
-    tsconfig = "//src:tsconfig.json",
+    tsconfig = "//src:app_config",
     visibility = ["//visibility:public"],
-    link_workspace_root = True,
 )
