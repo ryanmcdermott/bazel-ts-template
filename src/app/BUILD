@@ -1,7 +1,5 @@
 load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
-# load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
-# load("@npm//@bazel/jasmine:index.bzl", "jasmine_node_test")
-load("@aspect_rules_js//js:defs.bzl", "js_run_binary")
+load("@aspect_rules_js//js:defs.bzl", "js_binary")
 
 ts_project(
     name = "adder",
@@ -14,7 +12,6 @@ ts_project(
     declaration = True,
     tsconfig = "//src:app_config",
     visibility = ["//visibility:public"],
-    # link_workspace_root = True,
 )
 
 # ts_project(
@@ -53,11 +50,10 @@ ts_project(
     declaration = True,
     tsconfig = "//src:app_config",
     visibility = ["//visibility:public"],
-    # link_workspace_root = True,
 )
 
-# js_binary(
-#     name = "main_bin",
-#     data = [":main"],
-#     entry_point = "main.js",
-# )
+js_binary(
+    name = "main_bin",
+    data = [":main"],
+    entry_point = "main.js",
+)

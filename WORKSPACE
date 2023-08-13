@@ -24,6 +24,17 @@ load("@aspect_bazel_lib//lib:repositories.bzl", "register_copy_directory_toolcha
 register_copy_directory_toolchains()
 register_copy_to_directory_toolchains()
 
+http_archive(
+    name = "aspect_rules_js",
+    sha256 = "7b2a4d1d264e105eae49a27e2e78065b23e2e45724df2251eacdd317e95bfdfd",
+    strip_prefix = "rules_js-1.31.0",
+    url = "https://github.com/aspect-build/rules_js/releases/download/v1.31.0/rules_js-v1.31.0.tar.gz",
+)
+
+load("@aspect_rules_js//js:repositories.bzl", "rules_js_dependencies")
+
+rules_js_dependencies()
+
 # load("@build_bazel_rules_nodejs//:index.bzl", "node_repositories", "npm_install")
 # npm_install(
 #     name = "npm",
