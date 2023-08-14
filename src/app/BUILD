@@ -14,31 +14,6 @@ ts_project(
     visibility = ["//visibility:public"],
 )
 
-# ts_project(
-#     name = "adder_test_lib",
-#     srcs = [
-#         "adder_test.ts",
-#     ],
-#     deps = [
-#         ":adder",
-#         "@npm//@types/jasmine",
-#         "@npm//@types/node"
-#     ],
-#     declaration = True,
-#     tsconfig = "//src:tsconfig.json",
-#     visibility = ["//visibility:public"],
-#     # link_workspace_root = True,
-# )
-
-# jasmine_node_test(
-#     name = "adder_test",
-#     templated_args = ["--bazel_patch_module_resolver"],
-#     deps = [
-#         ":adder_test_lib",
-#     ],
-# )
-
-
 ts_project(
     name = "main",
     srcs = [

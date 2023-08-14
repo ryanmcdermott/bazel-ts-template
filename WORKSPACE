@@ -34,10 +34,3 @@ http_archive(
 load("@aspect_rules_js//js:repositories.bzl", "rules_js_dependencies")
 
 rules_js_dependencies()
-
-# load("@build_bazel_rules_nodejs//:index.bzl", "node_repositories", "npm_install")
-# npm_install(
-#     name = "npm",
-#     package_json = "//src:package.json",
-#     package_lock_json = "//src:package-lock.json",
-# )
