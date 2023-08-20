@@ -11,6 +11,7 @@ ts_project(
     ],
     declaration = True,
     tsconfig = "//src:app_config",
+    tsc = "//src/third_party/js/typescript/lib:tsc_bin",
     visibility = ["//visibility:public"],
 )
 
@@ -22,6 +23,7 @@ ts_project(
     deps = [
         ":adder",
     ],
+    tsc = "//src/third_party/js/typescript/lib:tsc_bin",
     declaration = True,
     tsconfig = "//src:app_config",
     visibility = ["//visibility:public"],

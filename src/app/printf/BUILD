@@ -6,6 +6,7 @@ ts_project(
         "printf.ts", 
     ],
     declaration = True,
+    tsc = "//src/third_party/js/typescript/lib:tsc_bin",
     tsconfig = "//src:app_config",
     visibility = ["//visibility:public"],
 )
